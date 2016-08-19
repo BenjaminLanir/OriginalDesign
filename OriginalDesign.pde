@@ -1,10 +1,17 @@
 void setup()
 {
-  size(100,100);
+  size(400,400);
 }
 void draw()
 {
-  ellipse(50,50,50,50);
+  triangles();
+}
+void triangles()
+{
+  noStroke ();
+  fill (0, 0, 255);
+  triangle(200, 40, 80, 280, 320, 280);
+  triangle(200, 360, 80, 120, 320, 120);
 }
 
 
