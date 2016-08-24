@@ -1,26 +1,35 @@
-int pt1x = 200;
-int pt2x = 80;
-int pt3x = 320;
+int x = 0;
+int rate = 1
+boolean right = true;
 void setup()
 {
-  size(400,400);
-  frameRate (60);
+  size(400 , 400);
 }
 void draw()
 {
-  pt1x = pt1x + 1;
-  pt2x = pt2x + 1;
-  pt3x = pt3x - 1;
-  background (255);
-  triangles();
+  ellipse();
 }
-void triangles()
+void ellipse()
 {
-  noStroke ();
-  fill (0, 0, 255);
-  triangle(pt1x, 40, pt2x, 280, pt3x, 280);
-  triangle(pt1x, 360, pt2x, 120, pt3x, 120);
+  background (0);  
+  text(x, 20, 20, 20);
+  ellipse(x, 200, 30, 30);
+  if (right == true)
+  {
+    x = x + 1;
+  }
+  if (right == false)
+  {
+    x = x - 1;
+  }
+  if (x > 200)
+  {
+    boolean right = false;
+    text("hello", 100, 200, 200);
+  }
+  if (x < 0)
+  {
+    boolean right = true;
+  }
 }
-
-
 
