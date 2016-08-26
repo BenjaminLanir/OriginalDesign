@@ -9,6 +9,7 @@ void draw()
   street();
   car();
   reset();
+  building();
 }
 void street()
 {
@@ -26,13 +27,13 @@ void car()
 {
   noStroke();
   fill(127);
-  ellipse(x, 200, 30, 30);
-  ellipse(x + 60, 200, 30, 30);
-  fill(255, 0, 0);
-  rect(x - 20, 170, 100, 25);
-  rect(x + 5, 145, 50, 25);
+  ellipse(x, 210, 30, 30);
+  ellipse(x + 60, 210, 30, 30);
+  fill(192, 192, 192);
+  rect(x - 20, 185, 100, 30);
+  rect(x + 5, 165, 50, 20);
   x = x + rate;
-  if (x > 400)
+  if (x > 340)
   {
    rate = -1;
   }
@@ -47,4 +48,17 @@ void reset()
   {
     x = 0;
   }
+}
+void building()
+{
+  noStroke();
+  fill(139, 119, 101);
+  rect(40, 50, 200, 110);
+  fill(154, 205, 50);
+  rect(120, 110, 40, 50);
+  fill(255, 255, 0);
+  rect(70, 90, 20, 20);
+  rect(190, 90, 20, 20);
+  fill(0);
+  ellipse(125, 135, 7, 7);
 }
