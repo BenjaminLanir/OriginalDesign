@@ -8,6 +8,7 @@ void draw()
 {
   street();
   car();
+  reset();
 }
 void street()
 {
@@ -16,13 +17,14 @@ void street()
   fill(0);
   rect(0, 160, 400, 80);
   fill(255, 255, 0);
-  rect(0, 190, 400, 20);
+  rect(25, 190, 50, 20);
+  rect(125, 190, 50, 20);
+  rect(225, 190, 50, 20);
+  rect(325, 190, 50, 20);
 }
 void car()
 {
   noStroke();
-
-  text(x, 20, 20, 20);
   fill(127);
   ellipse(x, 200, 30, 30);
   ellipse(x + 60, 200, 30, 30);
@@ -37,5 +39,12 @@ void car()
   if (x < 0)
   {
     rate = 1;
+  }
+}
+void reset()
+{
+  if (mousePressed)
+  {
+    x = 0;
   }
 }
